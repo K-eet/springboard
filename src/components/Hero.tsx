@@ -16,7 +16,7 @@ export default function Hero() {
       />
 
       <div className="max-w-[900px] mx-auto px-6 pt-20 text-center">
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.1] tracking-tight mb-6">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.1] tracking-tight mb-6">
           Transforming Enterprises Through Strategic AI Innovation
         </h1>
         <p className="text-lg sm:text-xl md:text-[22px] text-[#a0a0a0] mb-12 max-w-[700px] mx-auto leading-relaxed">

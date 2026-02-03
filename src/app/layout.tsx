@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Text } from "next/font/google";
+import { Inter, DM_Serif_Text, Quintessential } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,6 +9,12 @@ const inter = Inter({
 
 const dmSerifText = DM_Serif_Text({
   variable: "--font-dm-serif",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const quintessential = Quintessential({
+  variable: "--font-quintessential",
   subsets: ["latin"],
   weight: "400",
 });
@@ -25,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${dmSerifText.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${dmSerifText.variable} ${quintessential.variable} font-sans antialiased`} suppressHydrationWarning>
         {children}
       </body>
     </html>
