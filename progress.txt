@@ -1,0 +1,76 @@
+## Project Status: PHASE 1–5 COMPLETE (prototype ready)
+
+## Completed
+
+### Documentation
+- [x] docs/PRD.md
+- [x] docs/APP_FLOW.md
+- [x] docs/TECH_STACK.md
+- [x] docs/FRONTEND_GUIDELINES.md
+- [x] docs/BACKEND_STRUCTURE.md
+- [x] docs/IMPLEMENTATION_PLAN.md
+- [x] CLAUDE.md (root)
+- [x] progress.txt (root)
+- [x] lessons.md (root)
+
+### Project Setup (Phase 1)
+- [x] Next.js 14.2.x initialized (TypeScript, Tailwind, App Router, src/)
+- [x] lucide-react installed
+- [x] shadcn/ui initialized (button, input, textarea, card components)
+- [x] tailwindcss-animate installed
+- [x] class-variance-authority, clsx, tailwind-merge installed
+- [x] Tailwind config extended with all design tokens (colors, fonts, spacing, borderRadius)
+- [x] globals.css with all CSS variables and base styles
+- [x] layout.tsx with Quintessential + Instrument Serif Google Fonts
+- [x] src/lib/utils.ts created
+
+### Layout Components (Phase 2)
+- [x] src/components/layout/Header.tsx (fixed, Sequoia-style nav, mobile hamburger)
+- [x] src/components/layout/Footer.tsx (dark teal #0D5C4B, multi-column, Sequoia-style)
+
+### Section Components (Phase 3)
+- [x] src/components/sections/Hero.tsx (Quintessential headline, teal SVG underline, pill CTA)
+- [x] src/components/sections/About.tsx (placeholder copy, editorial layout)
+- [x] src/components/sections/Services.tsx (Consulting + Ventures cards)
+- [x] src/components/sections/Partners.tsx (Silicon Foundry featured + partner grid)
+- [x] src/components/sections/Team.tsx (CEO card + 4 advisor grid)
+- [x] src/components/sections/Contact.tsx (Formspree form, validation, success/error states)
+
+### Assembly (Phase 4)
+- [x] src/app/page.tsx assembled (Hero → About → Services → Partners → Team → Contact)
+- [x] Skip-to-content accessibility link
+
+### Deployment Prep (Phase 5)
+- [x] next.config.mjs configured for static export
+- [x] .env.example created (NEXT_PUBLIC_FORMSPREE_ID)
+- [x] Production build verified: ✓ all 5 static pages generated cleanly
+
+## In Progress
+(none)
+
+## Next Steps (client actions required)
+1. Replace placeholder copy in all sections with real content
+2. Replace placeholder headshots with real images (160px circle for CEO, 96px for advisors)
+3. Replace Silicon Foundry logo placeholder with real logo asset
+4. Add real LinkedIn URLs to team members
+5. Set up Formspree account → get form ID → replace YOUR_FORM_ID in Contact.tsx
+6. Add real partner logos to Partners section
+7. Update metadata in layout.tsx (title, description)
+8. Deploy to Vercel or Netlify
+
+## Known Issues
+(none)
+
+## Placeholder inventory
+- Hero headline: "Where bold ideas meet enterprise ambition." — replace with approved copy
+- About copy: 3 paragraphs — replace with approved copy
+- Services copy: Consulting + Ventures descriptions — replace with approved copy
+- Partners copy: Silicon Foundry description — replace with approved copy
+- Team: CEO name, bio, all 4 advisor names/titles/bios — replace with real data
+- Contact copy — replace with approved copy
+- Formspree ID: YOUR_FORM_ID — must be replaced before contact form works
+
+## Notes
+- Static export configured: `npm run build` produces /out directory ready for Vercel/Netlify
+- All hover states use inline JS event handlers (components marked "use client" where needed)
+- Sequoia Capital aesthetic fully implemented: cream bg, pill buttons/inputs, dark teal footer, uppercase nav

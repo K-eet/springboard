@@ -1,27 +1,27 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Text, Quintessential } from "next/font/google";
+import { Quintessential, Newsreader } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const dmSerifText = DM_Serif_Text({
-  variable: "--font-dm-serif",
-  subsets: ["latin"],
-  weight: "400",
-});
-
 const quintessential = Quintessential({
-  variable: "--font-quintessential",
-  subsets: ["latin"],
   weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const newsreader = Newsreader({
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Springboard Malaysia | Enterprise AI Transformation",
-  description: "Springboard is a consulting and ventures firm partnered with Silicon Foundry, helping enterprises navigate AI transformation.",
+  title: "Springboard — Enterprise AI Transformation | Malaysia",
+  description:
+    "Springboard is a consulting and ventures firm based in Malaysia, partnering with Silicon Foundry (a Kearney company) to accelerate enterprise AI transformation.",
+  keywords: ["consulting", "ventures", "enterprise AI", "Malaysia", "Silicon Foundry"],
 };
 
 export default function RootLayout({
@@ -30,8 +30,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${dmSerifText.variable} ${quintessential.variable} font-sans antialiased`} suppressHydrationWarning>
+    <html lang="en">
+      <body
+        className={`${quintessential.variable} ${newsreader.variable}`}
+      >
+        <a href="#main-content" className="skip-to-content">
+          Skip to content
+        </a>
         {children}
       </body>
     </html>
