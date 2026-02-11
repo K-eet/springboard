@@ -32,3 +32,8 @@ Each entry: Date | Issue | Correction | Rule
 - **Issue:** create-next-app@14 refuses to run if target directory contains files (CLAUDE.md, lessons.md, progress.txt)
 - **Correction:** Temporarily moved conflicting files to a temp dir, ran create-next-app, moved files back
 - **Rule:** For future projects, create docs files AFTER running create-next-app, or use a subdirectory then promote
+
+### 2026-02-11 | Deleted wrangler.jsonc broke Cloudflare Pages deploy | Restore from git history | Never delete deployment config files
+- **Issue:** `wrangler.jsonc` was deleted during a bulk commit, causing `npx wrangler deploy` to fail with "Missing entry-point to Worker script or to assets directory"
+- **Correction:** Restored file from `git show HEAD~1:wrangler.jsonc`
+- **Rule:** `wrangler.jsonc` is required for Cloudflare Pages deployment. Never delete it. Treat it as a protected config file alongside `next.config.mjs`, `tailwind.config.ts`, and `tsconfig.json`
